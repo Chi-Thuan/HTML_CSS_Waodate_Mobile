@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" /> 
+</head>
+<body>
+    <div class="app">
+        <div class="wrap-login">
+            <div class="login-main UI-item container">
+                <div class="logo-wao">
+                    <img src="./images/logo-wao-login.png" alt="logo">
+                </div>
+                <p class="intro-wao">
+                    Bằng cách bấm vào Đăng Nhập, bạn đồng ý với <a href="#" class="link-intro">Điều Khoản</a> của chúng tôi. <br>
+                    Tìm hiều về cách chúng tôi xử lý dữ liệu của bạn trong <a href="#" class="link-intro">Chính Sách Quyền Riêng Tư</a> và <a href="#" class="link-intro">Chính sách về Cookie</a> của chúng tôi.
+                </p>
+
+                <div class="wrap-option-login">
+                    <label for="openLoginPhone" class="row">
+                        <div class="icon">
+                            <img src="./images/icon/icon_login_phone.svg" alt="icon">
+                        </div>
+                        <span class="txt">
+                            Đăng nhập bằng số điện thoại
+                        </span>
+                    </label>
+                    <div class="row">
+                        <div class="icon">
+                            <img src="./images/icon/icon_login_fb.svg" alt="icon">
+                        </div>
+                       <span class="txt">Đăng nhập qua facebook</span>
+                    </div>
+                    <div class="row">
+                        <div class="icon">
+                            <img src="./images/icon/icon_login_gg.svg" alt="icon">
+                        </div>
+                        <span class="txt">Đăng nhập qua google</span>
+                    </div>
+                </div>
+                
+                <a href="" class="link-error-login">
+                    Sự cố khi đăng nhập?
+                </a>
+                <p class="note-login">
+                    Chúng tôi không đăng bất kỳ thông tin nào lên Facebook
+                </p>
+            </div>
+
+            <input type="checkbox" id="openLoginPhone" hidden>
+            <div class="wrap-login-phone container UI-item">
+                <input type="radio" name="subLoginPhone" id="open-phone" checked hidden>
+                <input type="radio" name="subLoginPhone" id="open-otp" hidden>
+                <input type="radio" name="subLoginPhone" id="open-done" hidden>
+               <div class="login-phone phone">
+                    <div class="banner">
+                        <img src="./images/icon/banner-login-phone.svg" alt="banner form">
+                    </div>
+                    <form action="" class="wrap-input-phone">
+                        <div class="box">
+                            <h4 class="title-popup">
+                                Định mệnh đang chờ bạn ở đây, đăng nhập để kết nối ngay nhé
+                            </h4>
+                            <div class="row">
+                                <select name="header-phone">
+                                    <option value="+84">+84</option>
+                                </select>
+                               <div class="wrap-txt-phone check-input-error">
+                                    <input type="number" p class="txt_phone" name="phone" placeholder="Nhập số điện thoại" required>
+                                    <span class="show-mess-error">Bạn đã nhập sai</span>
+                               </div>
+                            </div>
+                        </div>
+                        <input type="submit" class="btn-primary submit-phone" value="Tiếp theo">
+                    </form>
+               </div>
+
+               <div class="login-phone otp">
+                    <div class="banner">
+                        <img src="./images/icon/banner-login-letter.svg" alt="banner form">
+                    </div>
+                    <form action="" class="wrap-input-phone">
+                        <div class="box">
+                            <h4 class="title-popup">
+                                Điền code được gửi vào số điện thoại của bạn vào bên dưới                               </h4>
+                            <div class="row">
+                            <div class="wrap-txt-phone check-input-error">
+                                <input type="number" class="txt_otp" name="txt_otp" required >
+                                <span class="show-mess-error">Bạn đã nhập sai</span>
+                                <p class="resend-otp">Gửi lại?</p>
+                            </div>
+                            </div>
+                        </div>
+                        <input type="submit" class="btn-primary submit-otp" value="Tiếp theo" />
+                    </form>
+                </div>
+
+                <div class="login-phone done">
+                   <div class="wrap-done">
+                        <div class="wrap-banner">
+                            <img src="./images/icon/banner-login-done.svg" alt="banner">
+                        </div>
+                        <div class="wrap-txt-done">
+                            <h4>
+                                Year!
+                            </h4>
+                            <p class="txt">
+                                Đây là lần đầu bạn đến với Waodate, hãy để cho chúng tôi hiểu thêm về bạn nhé!
+                            </p>
+                        </div>
+                   </div>
+                   <div class="btn-primary submit-done" >
+                        Tiếp theo
+                   </div>
+                </div> 
+            </div>
+        
+          <div class="wrap-popup-register active">
+                <div class="popup-content">
+
+                    <div class="wrap-popup-item step-1 active">
+                        <div class="popup-item container">
+                            <div class="line-status">
+                                <div class="status-current"></div>
+                            </div>
+                            <form action="#" class="form-validate" >
+                                <div class="wrap-content-item">
+                                    <p class="title">
+                                        Tên của bạn là
+                                    </p>
+                                    <div class="content-item check-input-error">
+                                        <input type="text" name="name" class="txt_name" minlength="1" required placeholder="Tên riêng" maxlength="25">
+                                        <span class="show-mess-error"></span>
+                                        <p class="description">
+                                            Đây là cách bạn xuất hiện trên Waodate
+                                        </p>
+                                    </div>
+                                </div>
+                                <input type="submit"  class="btn-primary btn-next-step" value="Tiếp tục" />
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="wrap-popup-item step-2 ">
+                        <div class="popup-item container">
+                            <div class="line-status">
+                                <div class="status-current"></div>
+                            </div>
+                            <form action="#" class="form-validate" >
+                                <div class="wrap-content-item">
+                                    <p class="title">
+                                        Tôi là
+                                    </p>
+                                    <div class="content-item check-input-error">
+                                        <input type="radio" name="sex" id="boy" value="1" hidden required>
+                                        <input type="radio" name="sex" id="girl" value="0" hidden required>
+                                        <div class="wrap-icon">
+                                            <label for="boy" class="label-sex">
+                                                <div class="icon boy">
+                                                    <img src="./images/icon/icon_radio_boy.svg" alt="icon boy">
+                                                    <img src="./images/icon/icon_radio_boy_check.svg" class="active boy" alt="icon boy check">
+                                                    <p class="description">Nam</p>
+                                                </div>
+                                            </label>
+                                            <label for="girl" class="label-sex">
+                                                <div class="icon girl">
+                                                    <img src="./images/icon/icon_radio_girl.svg" class="girl" alt="icon girl">
+                                                    <img src="./images/icon/icon_radio_girl_girl.svg" class="active girl" alt="icon girl check">
+                                                    <p class="description">Nữ</p>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="submit" value="Tiếp tục"  class="btn-primary btn-next-step" />
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="wrap-popup-item step-3  ">
+                        <div class="popup-item container">
+                            <div class="line-status">
+                                <div class="status-current"></div>
+                            </div>
+                            <form action="#" class="form-validate" >
+                                <div class="wrap-content-item">
+                                    <p class="title">
+                                        Sinh nhật của tôi là
+                                    </p>
+                                    <div class="content-item check-input-error">
+                                        <div class="day">
+                                            <p class="description">Ngày</p>
+                                            <div class="wrap-input">
+                                                <input type="text" class="input-item" placeholder="D" maxlength="1" required 
+                                                onkeydown="return ( event.ctrlKey || event.altKey 
+                                                || (47<event.keyCode && event.keyCode<58 && event.shiftKey==false) 
+                                                || (95<event.keyCode && event.keyCode<106)
+                                                || (event.keyCode==8) || (event.keyCode==9) 
+                                                || (event.keyCode>34 && event.keyCode<40) 
+                                                || (event.keyCode==46) )" 
+                                                onclick="this.select()"
+                                                />
+
+                                                <input type="text" class="input-item" placeholder="D" maxlength="1" required 
+                                                onkeydown="return ( event.ctrlKey || event.altKey 
+                                                || (47<event.keyCode && event.keyCode<58 && event.shiftKey==false) 
+                                                || (95<event.keyCode && event.keyCode<106)
+                                                || (event.keyCode==8) || (event.keyCode==9) 
+                                                || (event.keyCode>34 && event.keyCode<40) 
+                                                || (event.keyCode==46) )" 
+                                                 onclick="this.select()"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="month">
+                                            <p class="description">Tháng</p>
+                                            <div class="wrap-input">
+                                                <input type="text" class="input-item"placeholder="M" maxlength="1" required 
+                                                onkeydown="return ( event.ctrlKey || event.altKey 
+                                                || (47<event.keyCode && event.keyCode<58 && event.shiftKey==false) 
+                                                || (95<event.keyCode && event.keyCode<106)
+                                                || (event.keyCode==8) || (event.keyCode==9) 
+                                                || (event.keyCode>34 && event.keyCode<40) 
+                                                || (event.keyCode==46) )" 
+                                                onclick="this.select()"
+                                                />
+                                                <input type="text" class="input-item"placeholder="M" maxlength="1" required 
+                                                onkeydown="return ( event.ctrlKey || event.altKey 
+                                                || (47<event.keyCode && event.keyCode<58 && event.shiftKey==false) 
+                                                || (95<event.keyCode && event.keyCode<106)
+                                                || (event.keyCode==8) || (event.keyCode==9) 
+                                                || (event.keyCode>34 && event.keyCode<40) 
+                                                || (event.keyCode==46) )" 
+                                                onclick="this.select()"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="year">
+                                            <p class="description">Năm</p>
+                                            <div class="wrap-input">
+                                                <input type="text" class="input-item"  placeholder="Y" maxlength="1" required 
+                                                onkeydown="return ( event.ctrlKey || event.altKey 
+                                                || (47<event.keyCode && event.keyCode<58 && event.shiftKey==false) 
+                                                || (95<event.keyCode && event.keyCode<106)
+                                                || (event.keyCode==8) || (event.keyCode==9) 
+                                                || (event.keyCode>34 && event.keyCode<40) 
+                                                || (event.keyCode==46) )"
+                                                onclick="this.select()"
+                                                />
+                                                <input type="text" class="input-item"  placeholder="Y" maxlength="1" required 
+                                                onkeydown="return ( event.ctrlKey || event.altKey 
+                                                || (47<event.keyCode && event.keyCode<58 && event.shiftKey==false) 
+                                                || (95<event.keyCode && event.keyCode<106)
+                                                || (event.keyCode==8) || (event.keyCode==9) 
+                                                || (event.keyCode>34 && event.keyCode<40) 
+                                                || (event.keyCode==46) )"
+                                                onclick="this.select()"
+                                                />
+                                                <input type="text" class="input-item"  placeholder="Y" maxlength="1" required 
+                                                onkeydown="return ( event.ctrlKey || event.altKey 
+                                                || (47<event.keyCode && event.keyCode<58 && event.shiftKey==false) 
+                                                || (95<event.keyCode && event.keyCode<106)
+                                                || (event.keyCode==8) || (event.keyCode==9) 
+                                                || (event.keyCode>34 && event.keyCode<40) 
+                                                || (event.keyCode==46) )" 
+                                                onclick="this.select()"
+                                                />
+                                                <input type="text" class="input-item"  placeholder="Y" maxlength="1" required 
+                                                onkeydown="return ( event.ctrlKey || event.altKey 
+                                                || (47<event.keyCode && event.keyCode<58 && event.shiftKey==false) 
+                                                || (95<event.keyCode && event.keyCode<106)
+                                                || (event.keyCode==8) || (event.keyCode==9) 
+                                                || (event.keyCode>34 && event.keyCode<40) 
+                                                || (event.keyCode==46) )" 
+                                                onclick="this.select()"
+                                                />
+                                            </div>
+                                        </div>
+                                        <input type="text" class="input-error error" hidden>
+                                        <p class="show-mess-error"></p>
+                                    </div>
+                                </div>
+                                <input type="submit" value="Tiếp tục"  class="btn-primary btn-next-step" />
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="wrap-popup-item step-4 ">
+                        <div class="popup-item container">
+                            <div class="line-status">
+                                <div class="status-current"></div>
+                            </div>
+                            <form action="#" class="form-validate" >
+                                <div class="wrap-content-item">
+                                   <div class="boy sex-item" >
+                                        <p class="title">
+                                            Nhiều người nóng lòng muốn biết thêm thông tin về bạn đây
+                                        </p>
+                                        <div class="wrap-option-job">
+                                            <div class="row check-input-error">
+                                                <div class="wrap-icon">
+                                                    <img src="./images/icon/popup_create_concept/icon_work_primary.svg" alt="icon">
+                                                </div>
+                                                <input type="text" name="job" class="txt_input txt_job_boy" placeholder="Công việc hiện tại của bạn là gì?"  >
+                                                <span class="show-mess-error">dscsdds</span>
+                                            </div>
+                                            <div class="row check-input-error">
+                                                <div class="wrap-icon">
+                                                    <img src="./images/icon/popup_create_concept/icon_salary_primary.svg" alt="icon">
+                                                </div>
+                                                <input type="text" name="salary" class="txt_input txt_salary_boy" placeholder="Mức lương hiện tại của bạn?" >
+                                                <span class="show-mess-error">dscsdds</span>
+                                            </div>
+                                        </div>
+                                   </div>
+                                   <div class="girl sex-item" >
+                                        <p class="title">
+                                            Nhiều người nóng lòng muốn biết thêm thông tin về bạn đây
+                                        </p>
+                                        <div class="row check-input-error">
+                                            <div class="wrap-icon">
+                                                <img src="./images/icon/popup_create_concept/icon_user_primary.svg" alt="icon">
+                                            </div>
+                                            <input type="text" class="txt_input txt_body_girl" placeholder="Bạn trông như thế nào?"  >
+                                            <span class="show-mess-error">loi</span>
+                                        </div>
+                                        <div class="row check-input-error">
+                                            <div class="wrap-icon">
+                                                <img src="./images/icon/popup_create_concept/icon_cloud_primary.svg" alt="icon">
+                                            </div>
+                                            <input type="text" class="txt_input txt_attitude" placeholder="Tính cách của bạn là gì?"  >
+                                            <span class="show-mess-error">loi</span>
+                                        </div>
+                                   </div>
+
+                                    <p class="title title-email">
+                                        Nhập Email của bạn
+                                    </p>
+                                    <div class="content-item check-input-error">
+                                        <input type="email" name="email" class="txt_input txt_email" placeholder="email ..." required />
+                                    </div>
+                                </div>
+                                <input type="submit" value="Tiếp tục"  class="btn-primary btn-next-step" />
+                            </form>
+
+
+
+                            <input type="radio" name="open-sub-popup" id="open-bodyGirl"  hidden>
+                            <input type="radio" name="open-sub-popup" id="open-attitudeGirl" hidden>
+                            <input type="radio" name="open-sub-popup" id="open-jobBoy" hidden>
+                            <input type="radio" name="open-sub-popup" id="open-salaryBoy" hidden>
+                            
+                            <div class="wrap-sub-popup">
+                                <div class="sub-popup popup-body-girl">
+                                    <div class="wrap-sub-popup-item">
+                                       <div class="container">
+                                            <span class="btn-back"><i class="fas fa-angle-double-left"></i></span>
+                                       </div>
+                                        <div class="popup-item-content">
+                                            <h3 class="title container">Bạn trông như thế nào?</h3>
+                                            <p class="description container">Hãy chọn một đáp án</p>
+                                            <hr>
+                                            <ul class="wrap-option container">
+                                                <li class="option-item">
+                                                    <label for="dongHoCat">Dáng đồng hồ cát</label><input type="radio" name="body_girl" value="dongHoCat" id="dongHoCat">
+                                                </li>
+                                                <li class="option-item">
+                                                    <label for="bale">Dáng balê</label><input type="radio" name="body_girl" value="bale" id="bale">
+                                                </li>
+                                                <li class="option-item">
+                                                    <label for="sieuMau">Dáng siêu mẫu</label><input type="radio" name="body_girl" value="sieuMau" id="sieuMau">
+                                                </li>
+                                                <li class="option-item">
+                                                    <label for="ngoiSaoBongRo">Ngôi sao bóng rỗ</label><input type="radio" name="body_girl" value="ngoiSaoBongRo" id="ngoiSaoBongRo">
+                                                </li>
+                                                <li class="option-item">
+                                                    <label for="canDoiUaNhin">Cân đối ưa nhìn</label><input type="radio" name="body_girl" value="canDoiUaNhin" id="canDoiUaNhin">
+                                                </li>
+                                                <li class="option-item">
+                                                    <label for="dungManhCuongTrang">Dũng mãnh cường tráng</label><input type="radio" name="body_girl" value="dungManhCuongTrang" id="dungManhCuongTrang">
+                                                </li>
+                                                <li class="option-item">
+                                                    <label for="minhHacSuongMai">Mình hạc sương mai</label><input type="radio" name="body_girl" value="minhHacSuongMai" id="minhHacSuongMai">
+                                                </li>
+                                                <li class="option-item">
+                                                    <label for="cucMoDeThuong">Cục mỡ dễ thương</label><input type="radio" name="body_girl" value="cucMoDeThuong" id="cucMoDeThuong">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sub-popup popup-attitude-girl">
+                                    <div class="wrap-sub-popup-item">
+                                       <div class="container">
+                                            <span class="btn-back"><i class="fas fa-angle-double-left"></i></span>
+                                       </div>
+                                        <div class="popup-item-content">
+                                            <h3 class="title container">Tính cách của bạn là gì?</h3>
+                                            <hr>
+                                            <ul class="wrap-option container">
+                                                <li class="option-item">
+                                                    <label for="caiNetDanhChetCaiDep">Cái nết đánh chết cái đẹp</label><input type="radio" name="attitude_girl" value="caiNetDanhChetCaiDep" id="caiNetDanhChetCaiDep">
+                                                </li>
+                                                <li class="option-item">
+                                                    <label for="anThangNoiNgay">Ăn thẳng nói ngay</label><input type="radio" name="attitude_girl" value="anThangNoiNgay" id="anThangNoiNgay">
+                                                </li>
+                                                <li class="option-item">
+                                                    <label for="sangNangChieuMua">Sáng nắng chiều mưa</label><input type="radio" name="attitude_girl" value="sangNangChieuMua" id="sangNangChieuMua">
+                                                </li>
+                                                <li class="option-item">
+                                                    <label for="coCungMoiDungDauGio">Có cứng mới đứng đầu gió</label><input type="radio" name="attitude_girl" value="coCungMoiDungDauGio" id="coCungMoiDungDauGio">
+                                                </li>
+                                                <li class="option-item">
+                                                    <label for="nhapGiaTuyTuc">Nhập gia tùy tục</label><input type="radio" name="attitude_girl" value="nhapGiaTuyTuc" id="nhapGiaTuyTuc">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sub-popup popup-job-boy">
+                                    <div class="wrap-sub-popup-item">
+                                       <div class="container">
+                                            <span class="btn-back"><i class="fas fa-angle-double-left"></i></span>
+                                       </div>
+                                        <div class="popup-item-content">
+                                            <h3 class="title container">Nghề nghiệp của bạn là?</h3>
+                                            <hr>
+                                            <ul class="wrap-option container">
+                                                <li class="option-item">
+                                                    <label for="job_boy_0">Công việc 1</label><input type="radio" name="job_boy" value="0" id="job_boy_0">
+                                                </li>
+                                                <li class="option-item">
+                                                    <label for="job_boy_1">Công việc 2</label><input type="radio" name="job_boy" value="1" id="job_boy_1">
+                                                </li>
+                                                <li class="option-item">
+                                                    <label for="job_boy_2">Công việc 3</label><input type="radio" name="job_boy" value="2" id="job_boy_2">
+                                                </li>
+                                                <li class="option-item">
+                                                    <label for="job_boy_3">Công việc 4</label><input type="radio" name="job_boy" value="3" id="job_boy_3">
+                                                </li>
+                                                <li class="option-item">
+                                                    <label for="job_boy_4">Công việc 5</label><input type="radio" name="job_boy" value="4" id="job_boy_4">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sub-popup popup-salary-boy">
+                                    <div class="wrap-sub-popup-item">
+                                       <div class="container">
+                                            <span class="btn-back"><i class="fas fa-angle-double-left"></i></span>
+                                       </div>
+                                        <div class="popup-item-content">
+                                            <h3 class="title container">Mức thu nhập hiện tại của bạn</h3>
+                                            <p class="description container">Bạn cần có thu nhập trên 15 triệu để sử dụng</p>
+                                            <hr>
+                                            <ul class="wrap-option container">
+                                                <li class="option-item">
+                                                    <label for="salary_boy_0">Class A1: 15M - 30M</label><input type="radio" name="salary_boy" value="0" id="salary_boy_0">
+                                                </li>
+                                                <li class="option-item">
+                                                    <label for="salary_boy_1">Class A2: 30M - 45M</label><input type="radio" name="salary_boy" value="1" id="salary_boy_1">
+                                                </li>
+                                                <li class="option-item">
+                                                    <label for="salary_boy_2">Class A3: 45M - 75M</label><input type="radio" name="salary_boy" value="2" id="salary_boy_2">
+                                                </li>
+                                                <li class="option-item">
+                                                    <label for="salary_boy_3">Class A4: 75M - 150M</label><input type="radio" name="salary_boy" value="3" id="salary_boy_3">
+                                                </li>
+                                                <li class="option-item">
+                                                    <label for="salary_boy_4">Class A5: 150M+</label><input type="radio" name="salary_boy" value="4" id="salary_boy_4">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wrap-popup-item step-5">
+                        <div class="popup-item container">
+                            <div class="line-status">
+                                <div class="status-current"></div>
+                            </div>
+                            <form action="#" class="form-validate"  >
+                                <div class="wrap-content-item">
+                                    <p class="title">
+                                        Nhà bạn ở đâu thế
+                                    </p>
+                                    <div class="content-item check-input-error">
+                                        <div class="row check-input-error">
+                                            <ul class="wrap-province">
+                                            </ul>
+                                            <input type="text" name="txt_province" class="row-item txt_province"  placeholder="Tỉnh/thành phố" required data-code="" />
+                                            <span class="show-mess-error"></span>
+                                        </div>
+                                        <div class="row check-input-error">
+                                            <select class="wrap-district row-item txt_district">
+                                                <option value="-1" selected >Vui lòng chọn quận/huyện</option>
+                                            </select>
+                                            <input type="text" class="" hidden/>
+                                            <span class="show-mess-error"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="submit" value="Tiếp tục"  class="btn-primary btn-next-step" />
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="wrap-popup-item step-6">
+                        <div class="popup-item container">
+                            <div class="line-status">
+                                <div class="status-current"></div>
+                            </div>
+                            <form action="#" class="form-validate"  >
+                                <div class="wrap-content-item">
+                                    <p class="title">
+                                        Chọn ảnh mà bạn yêu thích
+                                    </p>
+                                    <div class="content-item check-input-error">
+                                        <input type="file" name="avatar">
+                                    </div>
+                                </div>
+                                <input type="submit" value="Tiếp tục"  class="btn-primary btn-submit-register" />
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="wrap-popup-item step-7">
+                        <div class="popup-item container">
+                            <div class="line-status">
+                                <div class="status-current"></div>
+                            </div>
+                            <form action="#" class="form-validate"  >
+                                <div class="wrap-content-item">
+                                    <p class="title">
+                                        Chọn ảnh mà bạn yêu thích
+                                    </p>
+                                    <div class="content-item check-input-error">
+                                        <input type="file" name="avatar">
+                                    </div>
+                                </div>
+                                <input type="submit" value="Tiếp tục"  class="btn-primary btn-submit-register" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+          </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>

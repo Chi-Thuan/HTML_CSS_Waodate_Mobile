@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="102" height="58" viewBox="0 0 102 58">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_2" data-name="Rectangle 2" width="102" height="58" transform="translate(1483 -122)" fill="#fff"/>
+    </clipPath>
+    <filter id="Path_1" x="-281.75" y="-2.75" width="387" height="66" filterUnits="userSpaceOnUse">
+      <feOffset dx="-2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Mask_Group_2" data-name="Mask Group 2" transform="translate(-1483 122)" clip-path="url(#clip-path)">
+    <g id="bg-nav" transform="translate(1209.25 -123.75)">
+      <g transform="matrix(1, 0, 0, 1, 273.75, 1.75)" filter="url(#Path_1)">
+        <path id="Path_1-2" data-name="Path 1" d="M372.882,5c-8.816,0-15.807,7.154-20.424,14.665A33.625,33.625,0,0,1,296.144,21.2C290.535,13.1,282.738,5,272.885,5H0V59H375V5Z" transform="translate(-273.75 -1.75)" fill="#fff"/>
+      </g>
+      <path id="Path_2" data-name="Path 2" d="M0,4.75A.25.25,0,0,0-.25,5V59a.25.25,0,0,0,.25.25H375a.25.25,0,0,0,.25-.25V5a.25.25,0,0,0-.25-.25h-2.118c-8.956,0-16.011,7.259-20.637,14.784a33.375,33.375,0,0,1-55.895,1.524A51.2,51.2,0,0,0,286.26,9.865c-3.911-3.06-8.376-5.115-13.375-5.115Z" fill="none" stroke="rgba(185,185,185,0.2)" stroke-linejoin="round" stroke-width="0.5"/>
+    </g>
+  </g>
+</svg>
